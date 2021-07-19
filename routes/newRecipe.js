@@ -1,13 +1,12 @@
 import { Router } from 'express'
+const router = Router()
+import * as newRecipeCtrl from '../controllers/newRecipe.js'
 
 export {
-  router
+    router
 }
 
-const router = Router()
 
-router.get('/', function (req, res) {
-  res.render('index', { title: 'New Recipe', user: req.user ? req.user : null })
-})
-router.post('/, ')
+router.get('/', newRecipeCtrl.index)
+router.post('/', newRecipeCtrl.create)
 
