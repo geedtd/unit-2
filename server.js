@@ -21,6 +21,8 @@ import('./config/passport.js')
 import { router as indexRouter } from './routes/index.js'
 import { router as authRouter } from './routes/auth.js'
 import { router as recipesRouter } from './routes/recipes.js'
+import { router as favoritesRouter } from './routes/favorites.js'
+
 
 // view engine setup
 app.set(
@@ -60,6 +62,8 @@ app.use(passport.session())
 app.use('/', indexRouter)
 app.use('/auth', authRouter)
 app.use('/recipes', recipesRouter)
+app.use('/favorites', favoritesRouter)
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
