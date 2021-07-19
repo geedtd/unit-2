@@ -6,7 +6,7 @@ export {
 }
 
 function index(req, res) {
-    res.render('recipes/index', { title: 'Recipes', user: req.user ? req.user : null })
+    res.render('favorites/index', { title: 'Favorites', user: req.user ? req.user : null })
     // Recipe.find({}, function(err, recipes) {
     //     res.render('recipes/index', {
     //         err: err,
