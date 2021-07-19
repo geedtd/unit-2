@@ -4,17 +4,27 @@
 </head>
 <body>
   <nav>
-    <a href="" class="title">Recipe Mania</a>
+    <section class="top-nav">
+      <a href="" class="title">Recipe Mania</a>
     <% if (user) { %>
       <a class='auth' href="/auth/logout">
         <button type="submit">Logout</button>
       </a>
     <% } else { %>
-      <a href="/auth/google" class="siwg-link">
+      <a class='auth' href="/auth/google" class="siwg-link">
         <button type="submit" class="siwg">
           <img id="siwg-image" alt="Sign in with Google" />
         </button>
       </a>
     <% } %>
+    </section>
+    <section class="bottom-nav">
+      <a href="">Home</a>
+      <a href="">Recipes</a>
+      <a href="">Favorites</a>
+      <a href="">Top Rated</a>
+      <a href="">History</a>
+    </section>
+    
 
   </nav>
