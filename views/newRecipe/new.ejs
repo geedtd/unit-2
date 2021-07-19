@@ -2,7 +2,24 @@
 <%- include('../partials/nav') %>
 
 <main>
-    
+    <form action="/newRecipe" method="POST">
+        <label>Recipe:
+            <input type="text" name='name' required> 
+        </label><br>
+        <label>Image Address
+            <input type="text" name="imageURL">
+        </label><br>
+        <label>Description
+            <input type="text" name="instructions" required>
+        </label><br>
+        <label>Instructions
+            <input type="text" name="instructions" required>
+        </label><br>
+        <label>Country of Origin
+            <input type="text" name="country" required>
+        </label><br>
+    </form>
+    <button type="submit">Submit Recipe</button>
 </main>
 
 <%- include('../partials/footer') %>
