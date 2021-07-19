@@ -67,7 +67,13 @@ h1 {
 .bottom-nav a {
   margin: 2vh 5vw;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
+.bottom-nav a:hover {
+  color:slateblue;
+}
 footer {
   text-align: center;
-
 }
