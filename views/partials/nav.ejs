@@ -4,8 +4,9 @@
 </head>
 <body>
   <nav>
+    <a href="" class="title">Recipe Mania</a>
     <% if (user) { %>
-      <a href="/auth/logout">
+      <a class='auth' href="/auth/logout">
         <button type="submit">Logout</button>
       </a>
     <% } else { %>
@@ -15,4 +16,5 @@
         </button>
       </a>
     <% } %>
+
   </nav>

@@ -1,4 +1,4 @@
-import { Mongoose } from "mongoose"
+import { mongoose } from "mongoose"
 
 const Schema = mongoose.Schema 
 
@@ -6,7 +6,7 @@ export {
     Recipe  
 }
 
-const recipeSchema = {
+const recipeSchema = new Schema({
     name : {
         type: String,
     },
@@ -19,5 +19,13 @@ const recipeSchema = {
     instructions : {
         type: String,
     },
-    rev
-}
+    reviews: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Review'
+    }],
+    country: {
+        type: String,
+    }
+})
+
+const Recipe = mongoose.model('Recipe', recipeSchema)
