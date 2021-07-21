@@ -25,6 +25,9 @@ const recipeSchema = new Schema({
     }],
     country: {
         type: String,
+    },
+    owner: {
+        type: Schema.Types.ObjectId, 'ref' : 'Profile'
     }
 })
 

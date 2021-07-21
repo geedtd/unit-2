@@ -2,6 +2,8 @@
 <%- include('../partials/nav') %>
 
 <main>
+    <h1>New Recipe!</h1>
+    <% if (user) { %> 
     <form action="/newRecipe" method="POST">
         <label>Recipe:
             <input type="text" name='name' required> 
@@ -18,8 +20,11 @@
         <label>Country of Origin
             <input type="text" name="country" required>
         </label><br>
+        <button type="submit">Submit Recipe</button>
     </form>
-    <button type="submit">Submit Recipe</button>
+    <% } else { %>
+        <h2>Please Login To Contribute A Recipe</h2>
+    <% } %>  
 </main>
 
 <%- include('../partials/footer') %>
