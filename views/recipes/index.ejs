@@ -3,6 +3,18 @@
 
 <main>
     Recipes
+    <% if (recipes.length) { %> 
+        <ul>
+            <% recipes.forEach(recipes => {  %> 
+            <li>
+                <%= recipes.name %>
+                
+            </li>
+            <% }) %> 
+        </ul>
+        <% }else {%>
+            <h2>There are no recipess</h2> 
+      <% } %> 
 </main>
 
 <%- include('../partials/footer') %>
