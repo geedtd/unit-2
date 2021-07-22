@@ -7,6 +7,11 @@
         <h1><%= recipe.name %> </h1>
         <h1><%= recipe.description %> </h1>
     </section>
+    <% if (recipe.owner.equals(user?.profile._id)) { %> 
+        <p>
+            <a href="recipes/<%= recipe._id %>/edit ">Edit This Recipe</a>
+        </p>
+    <% } %> 
 </main>
 
 <%- include('../partials/footer') %>

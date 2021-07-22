@@ -5,6 +5,7 @@ export {
     newRecipe as new,
     create,
     show,
+    edit,
 
 }
 
@@ -18,6 +19,10 @@ function create(req, res) {
         console.log(err)
         res.redirect('/recipes')
     })
+}
+
+function edit(req, res) {
+    
 }
 
 function show(req,res ) {
