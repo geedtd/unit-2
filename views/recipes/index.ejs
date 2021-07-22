@@ -5,10 +5,10 @@
     Recipes
     <% if (recipes.length) { %> 
         <ul>
-            <% recipes.forEach(recipes => {  %> 
+            <% recipes.forEach(recipe => {  %> 
             <li>
-                <a href="/recipes/<%= recipe._id %> "></a>
-                <%= recipes.name %>
+                <a href="/recipes/<%= recipe._id %> "><%= recipe.name %></a>
+                
                 
             </li>
             <% }) %> 
