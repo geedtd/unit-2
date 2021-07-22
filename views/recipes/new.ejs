@@ -3,8 +3,8 @@
 
 <main>
     <h1>New Recipe!</h1>
-    <% if (user) { %> 
-    <form action="/recipe" method="POST">
+     
+    <form action="/recipes" method="POST">
         <label>Recipe:
             <input type="text" name='name' required> 
         </label><br>
@@ -12,7 +12,7 @@
             <input type="text" name="imageURL">
         </label><br>
         <label>Description
-            <input type="text" name="instructions" required>
+            <input type="text" name="description" required>
         </label><br>
         <label>Instructions
             <input type="text" name="instructions" required>
@@ -22,9 +22,9 @@
         </label><br>
         <button type="submit">Submit Recipe</button>
     </form>
-    <% } else { %>
+    
         <h2>Please Login To Contribute A Recipe</h2>
-    <% } %>  
+     
 </main>
 
 <%- include('../partials/footer') %>
