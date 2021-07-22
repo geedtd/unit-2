@@ -1,23 +1,14 @@
 import { Router } from 'express'
-const router = Router()
 import * as recipesCtrl from '../controllers/recipes.js'
+import { isLoggedIn } from '../middleware/middleware.js'
 
-router.get('/',recipesCtrl.index) 
 
 export {
     router
 }
 
+const router = Router()
 
-// import { Router } from 'express'
-// const router = Router()
-// import * as newRecipeCtrl from '../controllers/newRecipe.js'
-// import { isLoggedIn } from '../middleware/middleware.js'
-
-// export {
-//     router
-// }
-
-
-// router.get('/new', newRecipeCtrl.new)
-// router.post('/', isLoggedIn, newRecipeCtrl.create)
+router.get('/',recipesCtrl.index) 
+router.get('/new', recipesCtrl.new)
+router.post('/', isLoggedIn, recipesCtrl.create)

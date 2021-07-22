@@ -2,6 +2,9 @@ import { Recipe } from "../models/recipe.js";
 
 export {
     index,
+    newRecipe as new,
+    create,
+    show,
 
 }
 
@@ -18,35 +21,27 @@ function index(req, res) {
     .then(recipes => {
         res.render('recipes/index', {
             recipes,
-            title: 'Recipes', 
-            user: req.user ? req.user : null 
+            title: 'Recipes',     
         })
     })
-    
-    
+    .catch(err => {
+        console.log(err)
+        res.redirect('/recipes/index')
+    })    
 }
 
-// import { Recipe } from "../models/recipe.js";
+function create(req, res) {
+    req.body.owner = req.user.profile 
+    Recipe.create(req.body)
+    .then(recipe => {
+        res.redirect('/recipes')
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/recipes')
+    })
+}
 
-// export {
-//     newRecipe as new,
-//     create,
-
-// }
-
-
-// function create(req, res) {
-//     req.body.owner = req.user.profile 
-//     Recipe.create(req.body)
-//     .then(recipe => {
-//         res.redirect('/recipes')
-//     })
-//     .catch(err => {
-//         console.log(err)
-//         res.redirect('/recipes')
-//     })
-// }
-
-// function newRecipe(req, res) {
-//     res.render('newRecipe/new', { title: 'New Recipe', user: req.user ? req.user : null })
-// }
+function newRecipe(req, res) {
+    res.render('recipes/new', { title: 'New Recipe' })
+}
