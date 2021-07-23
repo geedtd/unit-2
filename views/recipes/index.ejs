@@ -6,7 +6,7 @@
     <% if (recipes.length) { %> 
         
             <% recipes.forEach(recipe => {  %> 
-            <section>
+            <section class="recipe-cards">
                 <h2><a href="/recipes/<%= recipe._id %> ">Recipe Name: <%= recipe.name %></a></h2>
                 <h3>Description: <%= recipe.description %> </h3>
                 <img src="<%= recipe.imageURL ? recipe.imageURL : 'https://i.imgur.com/I1sUAQ8.png' %>" alt="Picture of Chef Plating">

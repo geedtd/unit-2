@@ -3,7 +3,7 @@
 
 <main>
     <% if (profile.avatar) { %>
-        <div>
+        <div id="show-avatar">
             <img 
             class="profile-avatar"
             src="<%= profile.avatar %> " 
@@ -40,11 +40,11 @@
     <% } %>
     <% if (profile.details) { %>
         <% profile.details.forEach( detail => { %>
-            <p>Location:<%= detail.location %></p>   
-            <p>Likes:<%= detail.likes %></p>  
-            <p>Dislikes<%= detail.dislikes %> </p>  
-            <p>Allergies:<%= detail.allergies %> </p>  
-            <p>Favorite Cuisine:<%= detail.favoriteCuisine %></p>  
+            <h2>Location: <%= detail.location %></h2>   
+            <h2>Likes: <%= detail.likes %></h2>  
+            <h2>Dislikes <%= detail.dislikes %> </h2>  
+            <h2>Allergies: <%= detail.allergies %> </h2>  
+            <h2>Favorite Cuisine: <%= detail.favoriteCuisine %></h2>  
       <%  }) %> 
    <% } else { %>
         

@@ -10,4 +10,4 @@ Pretty Straight Forward UI
 Home will greet a user with a personalized message if they're logged in.   
 Recipes allows you to browse recipes, even without being logged in.  
 Add Recipe and Profile both require you to be logged in.  
-<img src='https://i.imgur.com/qoin0oi.png' height='400' >
+<img src='https://i.imgur.com/qoin0oi.png' height='300' >

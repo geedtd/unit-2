@@ -6,19 +6,19 @@
     
     <form action="/recipes" method="POST">
         <label>Recipe:
-            <input type="text" name='name' required> 
+            <input type="text" name='name' required autocomplete="off"> 
         </label><br>
         <label>Image Address
-            <input type="text" name="imageURL">
+            <input type="text" name="imageURL" autocomplete="off">
         </label><br>
         <label>Description
-            <input type="text" name="description" required>
+            <input type="text" name="description" required autocomplete="off">
         </label><br>
         <label>Instructions
-            <input type="text" name="instructions" required>
+            <input type="text" name="instructions" required autocomplete="off">
         </label><br>
         <label>Country of Origin
-            <input type="text" name="country" required>
+            <input type="text" name="country" required autocomplete="off">
         </label><br>
         <button type="submit">Submit Recipe</button>
     </form>     

@@ -3,6 +3,7 @@
 
 <main>
     <h1>Edit Your Recipe</h1>
+<div>
     <form action="/recipes/<%= recipe._id %>?_method=PUT" method="POST">
         <label>
             Name:
@@ -12,9 +13,46 @@
              value="<%= recipe.name %>"
              autocomplete='off'
             >
-        </label>
+        </label><br>
+        <label>
+            Image URL: 
+            <input
+             type="text"
+             name="imageURL"
+             value="<%= recipe.imageURL %>"
+             autocomplete='off'
+            >
+        </label><br>
+        <label>
+            Description: 
+            <input
+             type="text"
+             name="description"
+             value="<%= recipe.description %>"
+             autocomplete='off'
+            >
+        </label><br>
+        <label>
+            Instructions: 
+            <input
+             type="text"
+             name="instructions"
+             value="<%= recipe.instructions %>"
+             autocomplete='off'
+            >
+        </label><br>
+        <label>
+            Country: 
+            <input
+             type="text"
+             name="country"
+             value="<%= recipe.country %>"
+             autocomplete='off'
+            >
+        </label><br>
         <button type="submit">Edit Recipe</button>
     </form>
+</div>
 </main>
 
 <%- include('../partials/footer') %>

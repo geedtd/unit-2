@@ -51,6 +51,39 @@ h1 {
   font-size: 4.6rem;
   font-family: 'Prata', serif;
 }
+form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+label {
+  font-size: 18px;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
 .title {
   color: red;
   justify-content: center;
@@ -82,6 +115,10 @@ h1 {
   font-family: 'Prata', serif;
   
 }
+p {
+  font-family: 'Prata', serif;
+  font-size: 15px;
+}
 img {
   height: 200px;
 }
@@ -99,6 +136,10 @@ footer {
   height: 2.5rem;
   text-align: center;
 }
+.recipe-cards {
+  align-content: center;
+  text-align: center;
+}
 #index-img {
   height: 350px;
   border-radius: 10px;
@@ -111,4 +152,7 @@ footer {
   height: 300px;
   border-radius: 5px;
   box-shadow: 3px 3px 3px #0c0b0b;
+}
+#show-avatar {
+  margin-top: 10px;
 }

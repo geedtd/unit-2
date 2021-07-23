@@ -2,7 +2,7 @@
 <%- include('../partials/nav') %>
 
 <main>
-    <section>
+    <section class="recipe-cards">
         
         <h1><%= recipe.name %> </h1>
         <h2><%= recipe.country %> </h2>
@@ -15,7 +15,7 @@
     </section>
     <% if (recipe.owner.equals(user?.profile._id)) { %> 
         <p>
-            <a href="/recipes/<%= recipe._id %>/edit ">Edit This Recipe</a>
+            <button><a href="/recipes/<%= recipe._id %>/edit ">Edit This Recipe</a></button>
         </p>
         <form action="/recipes/<%= recipe._id %>?_method=DELETE" method="POST">
             <button type="submit">
@@ -23,14 +23,6 @@
             </button>
         </form>
     <% } %>
-    <form 
-        action="/recipes/<%= recipe._id %>/reviews"
-        method="POST">
-        <label>Review :
-            <input type="text" name="review" required>
-        </label>
-        <button type="submit">Add Review</button>
-    </form> 
 </main>
 
 <%- include('../partials/footer') %>
