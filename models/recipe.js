@@ -1,5 +1,7 @@
 import  mongoose  from "mongoose"
 
+
+
 const Schema = mongoose.Schema 
 
 export {
@@ -28,7 +30,8 @@ const recipeSchema = new Schema({
         type: String,
     },
     owner: {
-        type: Schema.Types.ObjectId, 'ref' : 'Profile'
+        type: Schema.Types.ObjectId,
+        'ref' : 'Profile'
     }
 })
 
