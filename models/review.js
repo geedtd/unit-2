@@ -4,9 +4,11 @@ export {
     Review
 }
 
-const reviewSchema = new mongoose.Schema({
+const Schema = mongoose.Schema
+
+const reviewSchema = new Schema({
     review: {
-        type: String,
+        type: Array,
         required: true,
     },
     owner: {

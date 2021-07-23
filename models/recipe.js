@@ -22,10 +22,10 @@ const recipeSchema = new Schema({
     instructions : {
         type: String,
     },
-    reviews: [{
+    reviews: {
         type: Schema.Types.ObjectId,
         ref: 'Review'
-    }],
+    },
     country: {
         type: String,
     },

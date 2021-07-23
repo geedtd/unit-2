@@ -9,3 +9,4 @@ export {
 
 const router = Router()
 
+router.post('recipes/:id/reviews', isLoggedIn, reviewsCtrl.createReview)
