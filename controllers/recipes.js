@@ -23,7 +23,21 @@ function create(req, res) {
 }
 
 function deleteRecipe(req, res) {
-
+    Recipe.findById(req.params.id)
+    .then(recipe => {
+        if (recipe.owner.equals(req.user.profile._id)) {
+            recipe.delete()
+            .then(() => {
+                res.redirect(`/recipes`)
+            })
+        }   else {
+            throw new Error ('Not Authorized')
+        }
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/recipes')
+    })
 }
 
 function update(req, res) {
