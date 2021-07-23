@@ -6,11 +6,11 @@ export {
 }
 
 function show(req, res) {
-    Profile.findById(req.parms.id)  
+    Profile.findById(req.params.id)  
     .then((profile) => {
         Profile.findById(req.user.profile._id)
         .then( self => {
-            const isSelf = self._id.equals(profile.__id)
+            const isSelf = self._id.equals(profile._id)
             res.render('profiles/show', {
                 title: `Chef ${profile.name}'s Profile`,
                 profile,
