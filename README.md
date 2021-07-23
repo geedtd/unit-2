@@ -9,5 +9,13 @@ If a user is not logged in they will be prompted to when clicking on the Add A R
 Pretty Straight Forward UI   
 Home will greet a user with a personalized message if they're logged in.   
 Recipes allows you to browse recipes, even without being logged in.  
-Add Recipe and Profile both require you to be logged in.  
+Add Recipe and Profile both require you to be logged in.
+
+*** Link To Project *** 
+https://recipe-mania.herokuapp.com  
+
+*** Screenshots ***   
 <img src='https://i.imgur.com/qoin0oi.png' height='300' >
+
+*** Technology Used ***  
+HTML, CSS, Javascript, Deal Struck with Cthulhu
