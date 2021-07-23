@@ -11,7 +11,44 @@
             >
         </div>
     <% } %>
-    <h1>It's <%= isSelf ? 'You' : profile.name %>!</h1>  
+    <h1>It's <%= isSelf ? 'You' : profile.name %>!</h1> 
+    <% if (isSelf && !(profile.details.length === 1)) { %>
+        <h2>Tell Us More About Yourself: </h2>
+        <form action="/profiles/<%= profile._id %>/details" method="POST">
+            <label>
+                Name:
+                <input type="text" name="location" autocomplete="off">
+            </label><br>
+            <label>
+                Likes:    
+                <input type="text" name="likes" autocomplete="off">
+            </label><br>
+            <label>
+                Dislikes:
+                <input type="text" name="dislikes" autocomplete="off">
+            </label><br>
+            <label>
+                Allergies: 
+                <input type="text" name="allergies" autocomplete="off">
+            </label><br>
+            <label>
+                Favorite Cuisine
+                <input type="text" name="favoriteCuisine" autocomplete="off">
+            </label><br>
+            <button type="submit">Submit</button>
+        </form>
+    <% } %>
+    <% if (profile.details) { %>
+        <% profile.details.forEach( detail => { %>
+            <p>Location:<%= detail.location %></p>   
+            <p>Likes:<%= detail.likes %></p>  
+            <p>Dislikes<%= detail.dislikes %> </p>  
+            <p>Allergies:<%= detail.allergies %> </p>  
+            <p>Favorite Cuisine:<%= detail.favoriteCuisine %></p>  
+      <%  }) %> 
+   <% } else { %>
+        
+    <% } %> 
 </main>
 
 <%- include('../partials/footer') %>
