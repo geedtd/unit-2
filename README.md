@@ -45,7 +45,14 @@ New Recipe Form is pretty straightforward, user must be logged in.
  •  Google Fonts  
  •  Deal Struck with Cthulhu  
  
+ 
+ 
+  *** IceBox ***  
   
+  •  Search Function
+  •  Maybe get an ingridient API?  
+  •  Ratings 
+  •  Comment Model implemented
 
 
 
