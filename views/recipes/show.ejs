@@ -3,10 +3,12 @@
 
 <main>
     <section>
-        <p>Created By: <%= recipe.owner.name %> </p>
+        
         <h1><%= recipe.name %> </h1>
-        <h1><%= recipe.description %> </h1>
+        <h2><%= recipe.country %> </h2>
+        <h2><%= recipe.description %> </h2>
         <p><%= recipe.instructions %> </p>
+        <h3>Created By: <%= recipe.owner.name %> </h3>
         <ul>
             <% recipe.reviews.forEach(review => { %> 
                 <li>

@@ -3,14 +3,8 @@
 
 <main>
   <h1>Hello, <%= user ? user.profile.name : "chef in the making!" %></h1>
-  <% if (user?.profile.avatar) { %>
-    <div>
-      <img 
-        src="<%= user.profile.avatar %>" 
-        alt="<%= user.profile.name %> avatar"
-      >
-    </div>
-  <% } %>
+  <h2>This website is made for everyone to be able to share their recipes, nothing brings the world together quite like food.</h2>
+  <img id="index-img" src="https://i.imgur.com/oiVeHuH.png" alt="Farmers Market Stand">
 </main>
 
 <%- include('./partials/footer') %>

@@ -15,6 +15,7 @@ const recipeSchema = new Schema({
     },
     imageURL : {
         type: String,
+        default: 'https://i.imgur.com/I1sUAQ8.png'
     },
     description: {
         type: String,

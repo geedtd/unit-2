@@ -81,6 +81,9 @@ h1 {
   font-family: 'Prata', serif;
   
 }
+img {
+  height: 200px;
+}
 a {
   text-decoration: none;
   color: black;
@@ -94,6 +97,10 @@ footer {
   bottom: 0;
   height: 2.5rem;
   text-align: center;
+}
+#index-img {
+  height: 350px;
+  border-radius: 10px;
 }
 #recipe-login {
   color: rgb(160, 98, 41);

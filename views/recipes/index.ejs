@@ -4,19 +4,20 @@
 <main>
     <h1>Recipes</h1>
     <% if (recipes.length) { %> 
-        <ul>
+        
             <% recipes.forEach(recipe => {  %> 
-            <li>
-                <a href="/recipes/<%= recipe._id %> ">Recipe Name:<%= recipe.name %></a>
-                <p>Description:<%= recipe.description %> </p>
+            <section>
+                <h2><a href="/recipes/<%= recipe._id %> ">Recipe Name: <%= recipe.name %></a></h2>
+                <h3>Description: <%= recipe.description %> </h3>
+                <img src="<%= recipe.imageURL ? recipe.imageURL : 'https://i.imgur.com/I1sUAQ8.png' %>" alt="Picture of Chef Plating">
                 
-            </li>
+            </section>
             <% }) %> 
-        </ul>
+        
         <% }else {%>
             <h2>There are no recipes</h2> 
       <% } %> 
-      <a href="/recipes/new">Add A Recipe</a>
+      <h3><a href="/recipes/new">Add A Recipe</a></h3>
 </main>
 
 <%- include('../partials/footer') %>
