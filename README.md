@@ -11,11 +11,23 @@ Home will greet a user with a personalized message if they're logged in.
 Recipes allows you to browse recipes, even without being logged in.  
 Add Recipe and Profile both require you to be logged in.
 
-*** Link To Project *** 
+*** Link To Project ***   
 https://recipe-mania.herokuapp.com  
 
 *** Screenshots ***   
 <img src='https://i.imgur.com/qoin0oi.png' height='300' >
+Pretty Straight Forward UI   
+Home will greet a user with a personalized message if they're logged in.   
+Recipes allows you to browse recipes, even without being logged in.  
+Add Recipe and Profile both require you to be logged in.
+
+  
+    
+<img src='https://i.imgur.com/nK4wse2.png' height='300' >  
+   
+New Recipe Form is pretty straightforward, user must be logged in.
+
+
 
 *** Technology Used ***  
-HTML, CSS, Javascript, Deal Struck with Cthulhu
+HTML, CSS, Javascript, MongoDB, Mongoose, Node.js, Google Oauth, Google Fonts  Deal Struck with Cthulhu
