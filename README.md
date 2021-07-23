@@ -11,6 +11,8 @@ Home will greet a user with a personalized message if they're logged in.
 Recipes allows you to browse recipes, even without being logged in.  
 Add Recipe and Profile both require you to be logged in.
 
+Clicking on Profiles, and then your own icon will allow you to share some details about yourself. Ultimately the app would have a social aspect for anyone trying to share recipes and have a good time.
+
 *** Link To Project ***   
 https://recipe-mania.herokuapp.com  
 
