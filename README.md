@@ -1,3 +1,5 @@
+
+
 README for Recipe Mania
 
 Recipe Mania WebApp
@@ -31,5 +33,24 @@ New Recipe Form is pretty straightforward, user must be logged in.
 
 
 
-*** Technology Used ***  
-HTML, CSS, Javascript, MongoDB, Mongoose, Node.js, Google Oauth, Google Fonts  Deal Struck with Cthulhu
+*** Technologies Used ***  
+
+ •  HTML
+ •  CSS
+ •  Javascript
+ •  MongoDB
+ •  Mongoose
+ •  Node.js
+ •  Google Oauth
+ •  Google Fonts
+ •  Deal Struck with Cthulhu
+ 
+  
+
+
+
+
+
+
+
+
