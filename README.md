@@ -35,15 +35,15 @@ New Recipe Form is pretty straightforward, user must be logged in.
 
 *** Technologies Used ***  
 
- •  HTML
- •  CSS
- •  Javascript
- •  MongoDB
- •  Mongoose
- •  Node.js
- •  Google Oauth
- •  Google Fonts
- •  Deal Struck with Cthulhu
+ •  HTML  
+ •  CSS  
+ •  Javascript  
+ •  MongoDB  
+ •  Mongoose  
+ •  Node.js  
+ •  Google Oauth  
+ •  Google Fonts  
+ •  Deal Struck with Cthulhu  
  
   
 
