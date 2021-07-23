@@ -7,12 +7,11 @@ export {
 function createReview(req, res ){
     // console.log('Please Work')
     // console.log(req.body)
-    
-    console.log(Recipe.findById(req.params._id))
-    Recipe.findById(req.params.id)
-    .then(recipe => {
-        recipe.reviews.push(req.body)
-        recipe.save()
+
+    Review.findById(req.params.id)
+    .then(rev => {
+        rev.review.push(req.body)
+        rev.save()
         .then(() => {
         res.redirect('/recipes')
         })

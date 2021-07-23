@@ -8,9 +8,9 @@
         <h1><%= recipe.description %> </h1>
         <p><%= recipe.instructions %> </p>
         <ul>
-            <% recipe.reviews.forEach(review => { %> //comments
+            <% recipe.reviews.forEach(review => { %> 
                 <li>
-                    <%= review.review %>
+                    <a href=""><%= review.review %></a>
                 </li>
             <% }) %>
         </ul> 
