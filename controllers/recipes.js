@@ -31,7 +31,7 @@ function deleteRecipe(req, res) {
                 res.redirect(`/recipes`)
             })
         }   else {
-            throw new Error ('Not Authorized')
+            throw new Error ('Not Authorized!')
         }
     })
     .catch(err => {
