@@ -118,9 +118,12 @@ input[type=submit]:hover {
 p {
   font-family: 'Prata', serif;
   font-size: 15px;
+  width: 80vw;
 }
 img {
-  height: 200px;
+  height: 300px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px #0c0b0b;
 }
 a {
   text-decoration: none;
@@ -148,11 +151,10 @@ footer {
 #recipe-login {
   color: rgb(160, 98, 41);
 }
-#show-img {
-  height: 300px;
-  border-radius: 5px;
-  box-shadow: 3px 3px 3px #0c0b0b;
-}
 #show-avatar {
   margin-top: 10px;
+}
+#delete-button {
+  padding: 1px;
+  background-color: red;
 }

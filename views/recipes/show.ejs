@@ -6,7 +6,7 @@
         
         <h1><%= recipe.name %> </h1>
         <h2><%= recipe.country %> </h2>
-        <img id="show-img" src="<%= recipe.imageURL ? recipe.imageURL : 'https://i.imgur.com/dNWd42c.png' %>" alt="">
+        <img class="show-img" src="<%= recipe.imageURL ? recipe.imageURL : 'https://i.imgur.com/dNWd42c.png' %>" alt="">
         <h2><%= recipe.description %> </h2>
         <p><%= recipe.instructions %> </p>
         <h3>Created By: <%= recipe.owner.name %> </h3>
@@ -14,10 +14,10 @@
         
     </section>
     <% if (recipe.owner.equals(user?.profile._id)) { %> 
-        <p>
-            <button><a href="/recipes/<%= recipe._id %>/edit ">Edit This Recipe</a></button>
-        </p>
-        <form action="/recipes/<%= recipe._id %>?_method=DELETE" method="POST">
+        
+            <button><a href="/recipes/<%= recipe._id %>/edit ">Edit This Recipe</a></button><br>
+        
+        <form id="delete-button" action="/recipes/<%= recipe._id %>?_method=DELETE" method="POST">
             <button type="submit">
                 Delete This Recipe
             </button>
