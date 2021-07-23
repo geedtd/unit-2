@@ -1,7 +1,12 @@
 import { Profile } from '../models/profile.js'
 
 export {
-    index
+    index, 
+    show,
+}
+
+function show(req, res) {
+    console.log('work please')
 }
 
 function index(req, res) {
