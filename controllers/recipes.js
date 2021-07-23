@@ -6,7 +6,8 @@ export {
     create,
     show,
     edit,
-
+    update,
+    deleteRecipe as delete
 }
 
 function create(req, res) {
@@ -14,6 +15,28 @@ function create(req, res) {
     Recipe.create(req.body)
     .then(recipe => {
         res.redirect('/recipes')
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/recipes')
+    })
+}
+
+function deleteRecipe(req, res) {
+
+}
+
+function update(req, res) {
+    Recipe.findById(req.params.id)
+    .then(recipe => {
+        if (recipe.owner.equals(req.user.profile._id)) {
+            recipe.update(req.body, { new: true })
+            .then(() => {
+                res.redirect(`/recipes/${recipe._id}`)
+            })
+        }   else {
+            throw new Error ('Not Authorized')
+        }
     })
     .catch(err => {
         console.log(err)
